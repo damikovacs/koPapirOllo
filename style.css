@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    color: green;
+}
+.main {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    box-shadow: 5px 5px 15px 0px rgba(21, 188, 32, 0.29);
+    border-radius: 8px;
+}
+.kepek {
+    margin: auto;
+    text-align: center;
+    display: flex;
+    height: 75px;
+    width: 50%;
+}
