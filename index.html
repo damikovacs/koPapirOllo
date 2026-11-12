@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kő Papír Olló</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="program.js">
+    <script src="program.js"></script>
 </head>
 <body>
     <div class="main">
         <h1>Kő - Papír - Olló</h1>
         <h2>Válassz!</h2>
         <div class="kepek">
-            <img src="img/ko.png" alt="">
-            <img src="img/papir.png" alt="">
-            <img src="img/ollo.png" alt="">
+            <img class="jatekos-valasztas" data-valasztas="ko" src="img/ko.png" alt="Kő" onclick="jatek('ko')">
+            <img class="jatekos-valasztas" data-valasztas="papir" src="img/papir.png" alt="Papír" onclick="jatek('papir')">
+            <img class="jatekos-valasztas" data-valasztas="ollo" src="img/ollo.png" alt="Olló" onclick="jatek('ollo')">
         </div>
         <h2>Gép választása</h2>
         <div class="kepek">
-            <img src="img/ko.png" alt="">
+            <img id="gepValasztasKep" src="img/ko.png" alt="A gép választása">
         </div>
         <h1>Eredmény:</h1>
+        <h3 id="eredmeny"></h3>
         <h3>Te pontod</h3>
         <h3 id="tePontod">0</h3>
         <h3>Gép pontja</h3>

@@ -1,18 +1,81 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     color: green;
 }
+body {
+    min-height: 100vh;
+    padding: 24px 16px;
+}
 .main {
-    width: 50%;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: min(100%, 560px);
+    margin: 0 auto;
+    padding: 24px 20px;
     text-align: center;
     box-shadow: 5px 5px 15px 0px rgba(21, 188, 32, 0.29);
     border-radius: 8px;
 }
 .kepek {
-    margin: auto;
-    text-align: center;
     display: flex;
-    height: 75px;
-    width: 50%;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    min-height: 100px;
+}
+.kepek img {
+    display: block;
+    width: clamp(64px, 18vw, 96px);
+    max-height: 86px;
+    object-fit: contain;
+}
+.jatekos-valasztas {
+    border-radius: 6px;
+    cursor: pointer;
+}
+.jatekos-valasztas.kivalasztott {
+    outline: 3px solid red;
+    outline-offset: 2px;
+}
+#gepPontja, #tePontod {
+    color: red;
+}
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+    .main {
+        gap: 8px;
+        padding: 20px 14px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 21px;
+    }
+    .kepek {
+        gap: 10px;
+        min-height: 84px;
+    }
+    .kepek img {
+        width: 72px;
+        max-height: 68px;
+    }
+}
+@media (max-width: 340px) {
+    .main {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    h1 {
+        font-size: 25px;
+    }
+    .kepek img {
+        width: 64px;
+    }
 }
