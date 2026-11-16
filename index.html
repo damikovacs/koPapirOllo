@@ -8,7 +8,33 @@
     <script src="program.js"></script>
 </head>
 <body>
-    <div class="main">
+    <form id="regisztracio" onsubmit="return regisztracio(event)">
+        <label>Játékosnév:</label>
+        <input
+            id="nev"
+            type="text"
+            pattern="[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ]{8,20}"
+            minlength="8"
+            maxlength="20"
+            title="A játékosnév 8-20 karakter lehet, és csak betűket tartalmazhat."
+            required
+        >
+
+        <br><br>
+
+        <label>E-mail cím:</label>
+        <input
+            type="email"
+            title="Adj meg egy érvényes e-mail címet!"
+            required
+        >
+
+        <br><br>
+
+        <button type="submit">Játék indítása</button>
+    </form>
+
+    <div id="main" class="main" style="display: none;">
         <h1>Kő - Papír - Olló</h1>
         <h2>Válassz!</h2>
         <div class="kepek">
@@ -22,7 +48,7 @@
         </div>
         <h1>Eredmény:</h1>
         <h3 id="eredmeny"></h3>
-        <h3>Te pontod</h3>
+        <h3 id="jatekosNev">Játékos neve</h3>
         <h3 id="tePontod">0</h3>
         <h3>Gép pontja</h3>
         <h3 id="gepPontja">0</h3>

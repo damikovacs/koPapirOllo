@@ -36,3 +36,16 @@ function jatek(elem) {
         pontElem.textContent = Number(pontElem.textContent) + 1;
     }
 }
+
+function regisztracio(event) {
+    event.preventDefault();
+
+    let nev = document.getElementById("nev").value;
+
+    document.getElementById("jatekosNev").innerText =
+        nev + " pontja";
+
+    document.getElementById("regisztracio").style.display = "none";
+
+    document.getElementById("main").style.display = "block";
+}
