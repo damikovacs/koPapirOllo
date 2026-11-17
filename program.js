@@ -35,6 +35,13 @@ function jatek(elem) {
         const pontElem = document.getElementById("gepPontja");
         pontElem.textContent = Number(pontElem.textContent) + 1;
     }
+
+    if (tePontod.textContent === "10") {
+        alert("Nyertél!");
+    }
+    else if (gepPontja.textContent === "10") {
+        alert("A gép nyert!");
+    }
 }
 
 function regisztracio(event) {
@@ -48,4 +55,13 @@ function regisztracio(event) {
     document.getElementById("regisztracio").style.display = "none";
 
     document.getElementById("main").style.display = "block";
+}
+
+function ujra() {
+    document.getElementById("tePontod").textContent = "0";
+    document.getElementById("gepPontja").textContent = "0";
+    document.getElementById("eredmeny").textContent = "";
+    document.querySelectorAll(".jatekos-valasztas").forEach((kep) => {
+        kep.classList.remove("kivalasztott");
+    });
 }
